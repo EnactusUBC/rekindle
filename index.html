@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rekindle</title>
+</head>
+<body>
+
+    <!-- Part 1: Navbar -->
+    <nav class="navbar">
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#problem">THE PROBLEM</a></li>
+            <li><a href="#product">THE PRODUCT</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <!-- Part 1: Hero -->
+    <section class="hero">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="assets/rekindle-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Rekindle</h1>
+            <p>Eliminating wood waste towards a cleaner <br class="desktop-only"> future/sustainable future</p>
+            <a href="#" class="btn">Shop now</a>
+        </div>
+    </section>
+
+    <!-- Part 2: Problem -->
+    <section id="problem" class="problem">
+        <div class="problem-content">
+            <h1>The problem</h1>
+            <h2>Every year, millions of tons of wood end up in landfills, contributing to soil pollution, methane emissions, and wasted potential.</h2>
+
+            <div class="problem-container">
+                <div class="problem-list">
+                    <div class="problem-item">
+                        <div class="problem-icon">
+                            <img src="assets/wind.png" alt="Air Pollution Icon">
+                        </div>
+                        <h3>Air Pollution</h3>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <div class="problem-icon">
+                            <img src="assets/scenery.png" alt="Landfills Icon">
+                        </div>
+                        <h3>Landfills Overflowing</h3>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <div class="problem-icon">
+                            <img src="assets/health.png" alt="Soil & Water Contamination Icon">
+                        </div>
+                        <h3>Soil & Water Contamination</h3>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="card-image">
+                        <img src="assets/clouds.png" alt="View above clouds">
+                    </div>
+                    <div class="card-text">
+                        <p>Wood waste releases CO2 & methane, the same gases trees are meant to store.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Part 3: Product -->
+    <section id="product" class="product">
+        <div class="product-content">
+            <h2>The solution...</h2>
+            <h1>Rekindle</h1>
+            <img src="assets/rekindle-product.png" alt="Rekindle Product" class="product-img">
+            <p>Instead of letting wood waste pollute our planet, we turn it into high-quality, sustainable products that preserve its carbon and prevent unnecessary waste</p>
+            <h5><a href="https://www.instagram.com/rekindle.ubc/" target="_blank" class="buy-link">Interested? Check our Instagram for where to buy</a></h5>
+            <div class="product-features">
+                <div class="product-feature">Every coaster we make prevents carbon loss from discarded wood</div>
+                <div class="product-feature">Each product keeps valuable resources in use and out of landfills</div>
+                <div class="product-feature">Every coaster we make prevents carbon loss from discarded wood</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Part 4: About -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About our Team</h2>
+            <h1>Rekindle is more than a product—it's a movement. Join us in reshaping the future of sustainability, one reclaimed piece at a time</h1>
+            <img src="assets/rekindle-team.png" alt="Rekindle Team" class="team-img">
+            <!-- <form class="mailing-list-form">
+                <label for="email">Join our mailing list</label>
+                <!-- <div class="input-container">
+                    <input type="email" id="email" placeholder="email@enactusubc.ca" required>
+                    <button type="submit">Submit</button>
+                </div> -->
+            <!-- </form> -->
+            <p>Made with 💚 from the Rekindle team</p>
+            <p>Contact us: internal.enactusubc@gmail.com</p>
+            <div class="socials-logos">
+                <img src="assets/instagram.png" alt="Instagram">
+                <img src="assets/message.png" alt="Message">
+                <img src="assets/linkedin.png" alt="LinkedIn">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

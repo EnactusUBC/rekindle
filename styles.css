@@ -1,0 +1,718 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #56351B;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Utility classes */
+.desktop-only {
+    display: inline;
+}
+
+/* PART 1 - NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+
+.nav-links li {
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4a373;
+}
+
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* PART 1 - HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 90px;
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 25px;
+    font-family: "Crimson Text", serif;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-family: "Crimson Text", serif;
+    font-weight: 100;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #56351B;
+}
+
+/* PART 2 - PROBLEM */
+.problem {
+    width: 100%;
+    background-image: url('assets/rekindle-background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 120vh;
+    position: relative;
+}
+
+.problem-content {
+    padding: 5vw 7vw;
+}
+
+.problem h1 {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #56351B;
+    font-family: 'Roboto', sans-serif;
+}
+
+.problem h2 {
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #56351B;
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px;
+}
+
+.problem-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.problem-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.problem-item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.problem-item:not(:last-child) {
+    border-bottom: 1px solid #56351B;
+}
+
+.problem-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+/* Active tab styling */
+.problem-item.active {
+    border-left: 4px solid #8C5E2A;
+    padding-left: 10px;
+    transform: translateX(5px);
+}
+
+.problem-item.active h3 {
+    font-weight: 500;
+    color: #8C5E2A; 
+}
+
+.problem-item:hover {
+    background-color: rgba(86, 53, 27, 0.05);
+}
+
+.problem-item.active .problem-icon img {
+    transform: scale(1.1);
+}
+
+.problem-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.problem-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.problem-item h3 {
+    font-size: 25px;
+    font-weight: 300;
+    color: #56351B;
+    font-family: 'Roboto', sans-serif;
+}
+
+.info-card {
+    width: 45%;
+    max-width: 550px;
+    min-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-top: 30px;
+}
+
+.card-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    background-color: white;
+    padding: 20px 25px;
+    text-align: center;
+}
+
+.card-text p {
+    font-size: 20px;
+    color: #56351B;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* PART 3 - PRODUCT */
+.product {
+    background-color: #402c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 50px 20px;
+}
+
+.product h2 {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.product h1 {
+    font-size: 150px;
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    color: #f2ddb8;
+    margin-bottom: 10px;
+}
+
+.product-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product p:first-of-type {
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding: 30px 30px;
+}
+
+.product h5 {
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+    padding: 30px 30px;
+}
+
+.product-content {
+    max-width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+
+.product-features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.product-feature {
+    background-image: url('assets/rekindle-product-feature-box.png');
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 550px;
+    max-width: 100%;
+    height: 300px; 
+    margin: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #56351B; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 50px 80px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.product-feature:hover {
+    transform: translateY(-8px);
+}
+
+/* Part 4 - About */
+.about {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 70px 20px;
+}
+
+.about-content {
+    max-width: 55vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+
+.team-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about h2 {
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    padding: 20px 20px;
+    color: #1C7F57;
+}
+
+.about h1 {
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 20px 20px;
+    margin-bottom: 50px;
+    color: #000000;
+}
+
+.mailing-list-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: #56351B;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-container {
+    display: flex;
+    border: 2px solid #56351B;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    font-size: 20px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+button {
+    margin: 4px 4px;
+    border-radius: 4px;
+    background-color: #56351B;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.about p:first-of-type {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #56351B;
+    font-family: 'Roboto', sans-serif;
+}
+
+.buy-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.about p:nth-of-type(2) {
+    font-size: 20px;
+    color: #56351B;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
+}
+
+.socials-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials-logos img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets (768px to 1023px) */
+@media screen and (max-width: 1023px) {
+    /* Navbar */
+    .navbar {
+        padding: 20px 40px;
+    }
+    
+    .nav-links {
+        gap: 30px;
+    }
+    
+    /* Hero */
+    .hero h1 {
+        font-size: 70px;
+    }
+    
+    .hero p {
+        font-size: 22px;
+    }
+    
+    /* Problem */
+    .problem-content {
+        padding: 5vw 5vw;
+    }
+    
+    .info-card {
+        width: 100%;
+        margin-top: 50px;
+    }
+    
+    .problem-container {
+        flex-direction: column;
+    }
+    
+    .problem h2 {
+        max-width: 100%;
+    }
+    
+    /* Product */
+    .product-content {
+        max-width: 80vw;
+    }
+    
+    .product h1 {
+        font-size: 120px;
+    }
+    
+    .product p:first-of-type {
+        font-size: 28px;
+    }
+    
+    .product-feature {
+        width: 100%;
+        font-size: 28px;
+        background-size: 100% 100%;
+        padding: 30px 60px;
+    }
+    
+    /* About */
+    .about-content {
+        max-width: 80vw;
+    }
+}
+
+/* Mobile (up to 767px) */
+@media screen and (max-width: 767px) {
+    /* Utility classes */
+    .desktop-only {
+        display: none;
+    }
+    
+    /* Navbar */
+    .mobile-menu-btn {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background-color: rgba(86, 53, 27, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+        gap: 40px;
+    }
+    
+    .nav-links.show {
+        right: 0;
+    }
+    
+    .nav-links li {
+        font-size: 22px;
+    }
+    
+    /* Hero */
+    .hero h1 {
+        font-size: 50px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .btn {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+    
+    /* Problem */
+    .problem {
+        min-height: auto;
+        padding-bottom: 50px;
+    }
+    
+    .problem h1 {
+        font-size: 28px;
+    }
+    
+    .problem h2 {
+        font-size: 20px;
+    }
+    
+    .problem-item h3 {
+        font-size: 20px;
+    }
+    
+    .card-image {
+        height: 250px;
+    }
+    
+    .card-text p {
+        font-size: 16px;
+    }
+    
+    /* Product */
+    .product h2 {
+        font-size: 32px;
+    }
+    
+    .product h1 {
+        font-size: 60px;
+    }
+    
+    .product p:first-of-type {
+        font-size: 20px;
+        padding: 20px 10px;
+    }
+    
+    .product h5 {
+        font-size: 24px;
+        padding: 20px 10px;
+    }
+    
+    .product-feature {
+        height: 200px;
+        font-size: 20px;
+        padding: 20px 40px;
+        margin: 15px 0;
+    }
+    
+    .product-content {
+        max-width: 95vw;
+    }
+    
+    /* About */
+    .about h2 {
+        font-size: 32px;
+        padding: 10px;
+    }
+    
+    .about h1 {
+        font-size: 24px;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .about-content {
+        max-width: 95vw;
+    }
+    
+    .mailing-list-form {
+        max-width: 100%;
+    }
+    
+    .input-container {
+        max-width: 100%;
+    }
+}
+
+/* Small phones (up to 480px) */
+@media screen and (max-width: 480px) {
+    /* Product */
+    .product h1 {
+        font-size: 48px;
+    }
+    
+    .product-feature {
+        font-size: 16px;
+        padding: 15px 30px;
+        height: 150px;
+    }
+    
+    /* About */
+    .about p:first-of-type,
+    .about p:nth-of-type(2) {
+        font-size: 16px;
+    }
+}
